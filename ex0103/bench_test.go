@@ -22,3 +22,17 @@ func TestFuncs(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkNaive(b *testing.B) {
+	args := make([]string, 100)
+	for i := 0; i < b.N; i++ {
+		naive(args)
+	}
+}
+
+func BenchmarkJoin(b *testing.B) {
+	args := make([]string, 100)
+	for i := 0; i < b.N; i++ {
+		join(args)
+	}
+}

@@ -1,0 +1,7 @@
+goos: darwin
+goarch: amd64
+pkg: github.com/hirak/gopl/ex0103
+BenchmarkNaive-4   	  200000	      5790 ns/op
+BenchmarkJoin-4    	 1000000	      1020 ns/op
+PASS
+ok  	github.com/hirak/gopl/ex0103	2.272s
