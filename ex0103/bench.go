@@ -1,14 +1,8 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"strings"
 )
-
-func main() {
-	fmt.Println(naive(os.Args[1:]))
-}
 
 func naive(args []string) string {
 	var s, sep string
