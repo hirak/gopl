@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
 )
 
 func main() {
-	fmt.Println(strings.Join(os.Args[1:], " "))
+	for i, v := range os.Args[1:] {
+		fmt.Printf("%d,%s\n", i, v)
+	}
 }
