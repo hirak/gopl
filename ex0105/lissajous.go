@@ -18,8 +18,8 @@ var palette = []color.Color{
 }
 
 const (
-	whiteIndex = 0 // パレットの最初の色
-	blackIndex = 1 // パレットの次の色
+	blackIndex = iota
+	greenIndex
 )
 
 func main() {
@@ -44,7 +44,7 @@ func lissajous(out io.Writer) {
 		for t := 0.0; t < cycles*2*math.Pi; t += res {
 			x := math.Sin(t)
 			y := math.Sin(t*freq + phase)
-			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), blackIndex)
+			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), greenIndex)
 		}
 		phase += 0.1
 		anim.Delay = append(anim.Delay, delay)
