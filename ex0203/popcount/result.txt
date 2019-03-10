@@ -1,0 +1,7 @@
+goos: darwin
+goarch: amd64
+pkg: github.com/hirak/gopl/ex0203/popcount
+BenchmarkPopCount-8         	2000000000	         0.54 ns/op
+BenchmarkPopCountByLoop-8   	200000000	         9.08 ns/op
+PASS
+ok  	github.com/hirak/gopl/ex0203/popcount	3.902s

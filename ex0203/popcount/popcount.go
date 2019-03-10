@@ -20,3 +20,13 @@ func PopCount(x uint64) int {
 		pc[byte(x>>(6*8))] +
 		pc[byte(x>>(7*8))])
 }
+
+// PopCountをループによって書き直した実装
+func PopCountByLoop(x uint64) int {
+	var sum byte
+	var i uint = 0
+	for ; i < 8; i++ {
+		sum = pc[byte(x>>(i*8))]
+	}
+	return int(sum)
+}
