@@ -19,7 +19,7 @@ func (c Celsius) String() string {
 }
 
 func (f Fahrenheit) String() string {
-	return fmt.Sprintf("%g°F", f)
+	return fmt.Sprintf("%g℉", f)
 }
 
 func (k Kelvin) String() string {
